@@ -1,0 +1,77 @@
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>YourWay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+
+    <!-- Mapquest -->
+    <!-- <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=LWwBPoWzFMHc99FYGxJyOK4ozkMblN3h"></script> -->
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=JgZ3k0BLkGRRspaYVi8SuZsFb3hGRsP4"></script>
+    <!-- <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=LWwBPoWzFMHc99FYGxJyOK4ozkMblN3h"></script> -->
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=JgZ3k0BLkGRRspaYVi8SuZsFb3hGRsP4"></script>
+</head>
+
+<body>
+    <header class="cmp-header">
+    <div class="logo">  
+        <a href="#"><img alt="YourWay" src="./assets/img/logo/YourWay.png"></a>
+    </div>
+    <div class="login">
+        
+            <a href="./modules/pages/login/login.html">
+                <i class="fal fa-bus"></i>Conductores</a>
+            <a href="./modules/pages/loginadmin/loginadmin.html">
+                <i class="fal fa-user-crown"></i>
+                Administrador</a>
+        
+
+    </div>
+</header>
+
+    <section class="mainpage">
+        <div class="content">
+            <div class="wrapper"><span class="lines active">Lineas</span><span class="stops">Paradas</span><span
+                    class="schedule">Horario</span></div>
+            <ul class="list">
+<!--                 
+                <li>
+                    <div class="lineimage">
+                        <div class="image"><i class="fal fa-bus"></i></div>
+                        <span>1</span>
+                    </div>
+                    <span class="linetitle">
+                        Plaza Esteve - San Telmo
+                    </span>
+                </li>
+                               -->
+            </ul>
+            <ul class="stops-list">
+                <span>No hay líneas seleccionadas</span>
+            </ul>
+            <ul class="schedule-list">
+                <span class="err">No hay parada seleccionada</span>
+            </ul>
+        </div>
+        <div id="mapid"></div>
+        <div class="hamburguer" onclick="Hamburguer(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </section>
+
+</body>
+
+</html>

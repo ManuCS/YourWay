@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.svg#FoundryBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg#FoundryBold") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto-medium';
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype"), url("../fonts/Roboto-Medium.svg#FoundryBold") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  font-family: Roboto-light; }
+
+.mainpage {
+  display: flex; }
+  .mainpage .content {
+    flex: 1 1 25%;
+    height: calc(100vh - 82px);
+    overflow-y: auto;
+    background-image: linear-gradient(to right top, #00e3b7, #00c0c3, #009ac0, #0074ab, #164e87);
+    color: #f9f7f3;
+    font-weight: bold; }
+    @media (max-width: 968px) {
+      .mainpage .content {
+        flex: 1 1 40%; } }
+    @media (max-width: 700px) {
+      .mainpage .content {
+        flex: 1 1 50%;
+        width: 70%;} }
+    .mainpage .content .wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 15px; }
+      .mainpage .content .wrapper span {
+        display: inline-block;
+        width: 50%;
+        cursor: pointer;
+        padding: 20px 0;
+        text-align: center;
+        border: 3px solid transparent;
+        transition: 0.5s ease-in-out; }
+        .mainpage .content .wrapper span.lines, .mainpage .content .wrapper span.stops {
+          position: relative; }
+          .mainpage .content .wrapper span.lines::after, .mainpage .content .wrapper span.stops::after {
+            content: "";
+            position: absolute;
+            border-right: 3px solid #74FAC8;
+            border-radius: 50%;
+            display: block;
+            top: calc(50% - 20px);
+            right: 0%;
+            height: 40px;
+            margin: auto; }
+        .mainpage .content .wrapper span.active {
+          border-bottom: 3px solid #74FAC8;
+          border-radius: 10%; }
+        .mainpage .content .wrapper span:hover {
+          border-bottom: 3px solid #74FAC8;
+          border-radius: 10%; }
+    .mainpage .content ul {
+      list-style: none;
+      padding: 0 20px; }
+      .mainpage .content ul.schedule-list {
+        display: none; }
+        .mainpage .content ul.schedule-list span {
+          font-size: 13px; }
+      .mainpage .content ul.stops-list {
+        display: none; }
+        .mainpage .content ul.stops-list span {
+          font-size: 13px; }
+        .mainpage .content ul.stops-list h2 {
+          display: flex;
+          align-items: flex-start; }
+          .mainpage .content ul.stops-list h2 .lineimage {
+            min-width: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #fff;
+            color: black;
+            border: 1px solid black;
+            border-bottom: 3px solid red;
+            border-radius: 5px;
+            padding: 2px;
+            margin-right: 10px; }
+            .mainpage .content ul.stops-list h2 .lineimage .image {
+              width: 15px; }
+              .mainpage .content ul.stops-list h2 .lineimage .image i {
+                width: 100%;
+                font-size: 16px; }
+            .mainpage .content ul.stops-list h2 .lineimage span {
+              padding: 0 3px;
+              font-size: 17px; }
+        .mainpage .content ul.stops-list li {
+          border-bottom: none;
+          position: relative;
+          padding-left: 25px;
+          display: flex;
+          justify-content: space-between; }
+          .mainpage .content ul.stops-list li.active::after {
+            background-color: #292a30; }
+          .mainpage .content ul.stops-list li:nth-child(2)::before {
+            height: 50%;
+            top: 50%; }
+          .mainpage .content ul.stops-list li:last-child::before {
+            height: 50%; }
+          .mainpage .content ul.stops-list li::before {
+            content: "";
+            position: absolute;
+            border-left: solid 3px #000;
+            height: 100%;
+            top: 0;
+            left: 5px; }
+          .mainpage .content ul.stops-list li::after {
+            content: "";
+            background-color: #fff;
+            border: 4px solid #292a30;
+            border-radius: 50%;
+            height: 5px;
+            position: absolute;
+            transition: background-color 0.3s ease;
+            width: 5px;
+            left: 0px; }
+            .mainpage .content ul.schedule-list ul{
+              margin-bottom: 20px;
+            }
+            .mainpage .content ul.schedule-list ul span {
+              font-size: 1.3em;
+              display: block; }
+            .mainpage .content ul.schedule-list ul li {
+              display: inline-block;
+              margin: 10px;
+              cursor: default;
+              border: none;
+              min-height: 0; }
+      .mainpage .content ul li {
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+        border-bottom: 1px solid white;
+        cursor: pointer;
+        font-size: 13px; }
+        .mainpage .content ul li:last-child {
+          border: none; }
+        .mainpage .content ul li:hover {
+          opacity: 0.7; }
+        .mainpage .content ul li .lineimage {
+          min-width: 35px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: space-around;
+          background-color: #fff;
+          color: black;
+          border: 1px solid black;
+          border-bottom: 3px solid red;
+          border-radius: 5px;
+          padding: 2px; }
+          .mainpage .content ul li .lineimage .image {
+            width: 15px; }
+            .mainpage .content ul li .lineimage .image i {
+              width: 100%; }
+          .mainpage .content ul li .lineimage span {
+            padding: 0 3px;
+            font-size: 13px; }
+        .mainpage .content ul li .linetitle {
+          width: 80%;
+          padding: 0 10px 0 10px; }
+  .mainpage #mapid {
+    width: 75%;
+    min-height: calc(100vh - 82px); }
+  .mainpage .leaflet-bottom.leaflet-left {
+    display: none; }
+  .mainpage .leaflet-bottom.leaflet-right {
+    display: none; }
+  @media (min-width: 601px) {
+    .mainpage .content {
+      display: block !important; } }
+  @media (max-width: 600px) {
+    .mainpage {
+      position: relative; }
+      .mainpage .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        display: none; }
+      .mainpage .hamburguer {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 900; }
+        .mainpage .hamburguer .bar1,
+        .mainpage .hamburguer .bar2,
+        .mainpage .hamburguer .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #164e87;
+          margin: 6px 0;
+          transition: 0.4s; }
+        .mainpage .hamburguer.change .bar1 {
+          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px); }
+        .mainpage .hamburguer.change .bar2 {
+          opacity: 0; }
+        .mainpage .hamburguer.change .bar3 {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px); }
+      .mainpage #mapid {
+        width: 100%; }
+      .mainpage .leaflet-control-zoom.leaflet-bar.leaflet-control {
+        display: none; } }

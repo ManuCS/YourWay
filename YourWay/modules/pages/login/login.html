@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>YourWay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../assets/css/style.css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/main.css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" media="all">
+    <link rel="stylesheet" href="../../../assets/fontawesome/css/all.css">
+
+    <script src="../../../assets/js/jquery-3.4.1.min.js"></script>
+
+    <script src="../../../assets/js/login.js" async="async"></script>
+
+</head>
+
+<body>
+
+
+
+
+<section class="cmp-login">
+    <div class="contentform">
+        <div class="header">
+            <div class="image"><img alt="YourWay" src="../../../assets/img/logo/YourWay.png"></div>
+        </div>
+        <form action="../../../php/admin/actions/login.php" method="POST" onsubmit="return login(this)">
+            <input id="user" name="user" placeholder="Nombre de usuario" type="text">
+            <input id="password" name="password" placeholder="Contraseña" type="password">
+
+            <input class="btn" id="login_button" type="submit" value="Iniciar sesión">
+        </form>
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <span class="error"><i class="fal fa-exclamation-triangle"></i> Datos incorrectos</span>
+    </div>
+</section>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,480 @@
+.cmp-admin-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cmp-admin-content h2 {
+  width: 70%;
+  margin: 10px auto 30px;
+  font-family: Roboto-Medium;
+  color: #164e87;
+}
+
+.cmp-admin-content table,
+.cmp-admin-content tr,
+.cmp-admin-content th,
+.cmp-admin-content td {
+  border: 1px solid #164e87;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.cmp-admin-content table {
+  margin: 0 auto 20px;
+  text-align: center;
+  width: 70%;
+}
+
+.cmp-admin-content table th {
+  color: #164e87;
+}
+
+.cmp-admin-content table tr:not([class]):hover {
+  background-color: #3d90e3;
+  color: #fff;
+}
+
+.cmp-admin-content table tr:not([class]):hover th {
+  color: #fff;
+}
+
+.cmp-admin-content table td,
+.cmp-admin-content table th {
+  width: 15%;
+}
+
+.cmp-admin-content table .acciones span {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.cmp-admin-content .form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.cmp-admin-content .form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px auto;
+  font-family: Roboto;
+}
+
+.cmp-admin-content .form form .hide {
+  display: none;
+}
+
+.cmp-admin-content .form form input {
+  font-family: Roboto;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cmp-admin-content .form form input[type="submit"] {
+  background-color: #3d90e3;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.cmp-admin-content .form form input[type="submit"]:hover {
+  background-color: #164e87;
+}
+
+.cmp-admin-content .form .error {
+  color: red;
+  display: none;
+}
+
+.cmp-admin-content .form .spinner {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
+  display: none;
+}
+
+.cmp-admin-content .form .double-bounce1,
+.cmp-admin-content .form .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #3d90e3;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.cmp-admin-content .form .double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+.cmp-drivermain {
+  display: flex;
+  justify-content: space-around;
+  font-family: Roboto;
+  flex-wrap: wrap;
+}
+
+.cmp-drivermain .profile,
+.cmp-drivermain .start-route {
+  border: 1px solid #164e87;
+  border-radius: 5px;
+  width: 40%;
+  margin: 20px 40px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 800px) {
+  .cmp-drivermain .profile,
+  .cmp-drivermain .start-route {
+    width: 80%;
+  }
+}
+
+.cmp-drivermain .profile h2,
+.cmp-drivermain .start-route h2 {
+  color: #164e87;
+}
+
+@media (max-width: 568px) {
+  .cmp-drivermain .profile h2,
+  .cmp-drivermain .start-route h2 {
+    font-size: 1.5em;
+  }
+}
+
+.cmp-drivermain .start-route form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cmp-drivermain .start-route form button {
+  background-color: #3d90e3;
+  color: #ffffff;
+  margin-top: 40px;
+  justify-self: flex-end;
+}
+
+.cmp-drivermain .start-route form button:hover {
+  background-color: #164e87;
+}
+
+.cmp-drivermain .start-route form button.finish {
+  background-color: #00E3B7;
+}
+
+.cmp-drivermain .start-route form button.finish:hover {
+  background-color: #74FAC8;
+}
+
+.cmp-drivermain .start-route span {
+  font-size: 13px;
+}
+
+.cmp-drivermain .profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cmp-drivermain .profile ul li {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.cmp-drivermain .profile ul li span {
+  font-weight: normal;
+}
+
+.cmp-drivermain .profile ul li .down {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.cmp-drivermain .profile ul li .down.rotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.cmp-drivermain .profile ul li ul {
+  display: none;
+  list-style-type: disc;
+  margin-left: 50px;
+}
+
+.cmp-drivermain .profile ul li ul li {
+  font-weight: normal;
+}
+
+.cmp-drivermain .profile ul li[class] {
+  cursor: pointer;
+}
+
+.cmp-drivermain .profile ul li table {
+  display: none;
+  margin: 0 auto;
+}
+
+.cmp-drivermain .profile ul li table tr,
+.cmp-drivermain .profile ul li table td,
+.cmp-drivermain .profile ul li table th {
+  border: 1px solid #164e87;
+  text-align: center;
+}
+
+.cmp-drivermain .profile ul li table td,
+.cmp-drivermain .profile ul li table th {
+  padding: 5px;
+}
+
+.cmp-drivermain .profile ul li table td {
+  font-weight: normal;
+}
+.cmp-header {
+  border-bottom: 2px solid #164e87;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cmp-header .logo {
+  width: 80px;
+}
+
+.cmp-header .logo a {
+  display: block;
+}
+
+.cmp-header .logo a img {
+  width: 100%;
+}
+
+.cmp-header .logo a img:hover {
+  opacity: 0.7;
+}
+
+.cmp-header .login {
+  font-family: Roboto-medium;
+  color: #164e87;
+  margin-right: 20px;
+  display: flex;
+  min-width: 25%;
+  justify-content: flex-end;
+}
+
+.cmp-header .login a,
+.cmp-header .login .user {
+  cursor: pointer;
+  margin-right: 30px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #164e87;
+}
+
+@media (max-width: 425px) {
+  .cmp-header .login a,
+  .cmp-header .login .user {
+    margin-right: 10px;
+  }
+}
+
+.cmp-header .login a:hover,
+.cmp-header .login .user:hover {
+  opacity: 0.7;
+}
+
+.cmp-header .login a i,
+.cmp-header .login .user i {
+  font-size: 25px;
+  margin-bottom: 7px;
+}
+
+.cmp-header .login .user {
+  cursor: default;
+}
+
+.cmp-header .login .user:hover {
+  opacity: 1;
+}
+
+.cmp-header .login .user form input {
+  font-family: Roboto;
+  cursor: pointer;
+  background: #3d90e3;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.cmp-header .login .user form input:hover {
+  opacity: 0.7;
+}
+.cmp-login {
+  height: 100vh;
+  background-image: url("../../assets/img/fondo.jpg");
+  background-position: center;
+  font-family: Roboto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmp-login .contentform {
+  min-width: 375px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px 2px #b9c2c4;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.cmp-login .contentform .error {
+  color: red;
+  display: none;
+}
+
+.cmp-login .contentform .header .image {
+  width: 80px;
+  margin: 0 auto;
+}
+
+.cmp-login .contentform .header .image img {
+  width: 100%;
+}
+
+.cmp-login .contentform form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px auto;
+  font-family: Roboto;
+}
+
+.cmp-login .contentform form .hide {
+  display: none;
+}
+
+.cmp-login .contentform form input {
+  font-family: Roboto;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cmp-login .contentform form input[type="submit"] {
+  background-color: #3d90e3;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.cmp-login .contentform form input[type="submit"]:hover {
+  background-color: #164e87;
+}
+
+.cmp-login .contentform .spinner {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
+  display: none;
+}
+
+.cmp-login .contentform .double-bounce1,
+.cmp-login .contentform .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #3d90e3;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.cmp-login .contentform .double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cmp-login .contentform {
+    min-width: 100%;
+  }
+}
+.cmp-menuAdmin ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  background-image: linear-gradient(to right top, #00e3b7, #00c0c3, #009ac0, #0074ab, #164e87);
+}
+
+.cmp-menuAdmin ul li {
+  font-family: Roboto;
+  color: #fff;
+  display: block;
+  padding: 20px;
+  height: 100%;
+}
+
+.cmp-menuAdmin ul li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
